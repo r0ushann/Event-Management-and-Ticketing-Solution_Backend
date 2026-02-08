@@ -14,10 +14,8 @@ import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Objects;
-import java.util.UUID;
+import java.util.*;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -79,5 +77,69 @@ public class Ticket {
     @Override
     public int hashCode() {
         return Objects.hash(id, status, createdAt, updatedAt);
+    }
+
+    public UUID getId() {
+        return id;
+    }
+
+    public void setId(UUID id) {
+        this.id = id;
+    }
+
+    public TicketStatusEnum getStatus() {
+        return status;
+    }
+
+    public void setStatus(TicketStatusEnum status) {
+        this.status = status;
+    }
+
+    public TicketType getTicketType() {
+        return ticketType;
+    }
+
+    public void setTicketType(TicketType ticketType) {
+        this.ticketType = ticketType;
+    }
+
+    public User getPurchaser() {
+        return purchaser;
+    }
+
+    public void setPurchaser(User purchaser) {
+        this.purchaser = purchaser;
+    }
+
+    public List<TicketValidation> getValidations() {
+        return validations;
+    }
+
+    public void setValidations(List<TicketValidation> validations) {
+        this.validations = validations;
+    }
+
+    public List<QrCode> getQrCodes() {
+        return qrCodes;
+    }
+
+    public void setQrCodes(List<QrCode> qrCodes) {
+        this.qrCodes = qrCodes;
+    }
+
+    public LocalDateTime getCreatedAt() {
+        return createdAt;
+    }
+
+    public void setCreatedAt(LocalDateTime createdAt) {
+        this.createdAt = createdAt;
+    }
+
+    public LocalDateTime getUpdatedAt() {
+        return updatedAt;
+    }
+
+    public void setUpdatedAt(LocalDateTime updatedAt) {
+        this.updatedAt = updatedAt;
     }
 }

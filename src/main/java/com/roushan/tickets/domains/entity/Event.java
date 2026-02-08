@@ -103,4 +103,116 @@ public class Event {
         return Objects.hash(id, name, start, end, venue, salesStart, salesEnd, status, createdAt,
                 updatedAt);
     }
+
+    public UUID getId() {
+        return id;
+    }
+
+    public void setId(UUID id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public LocalDateTime getStart() {
+        return start;
+    }
+
+    public void setStart(LocalDateTime start) {
+        this.start = start;
+    }
+
+    public LocalDateTime getEnd() {
+        return end;
+    }
+
+    public void setEnd(LocalDateTime end) {
+        this.end = end;
+    }
+
+    public String getVenue() {
+        return venue;
+    }
+
+    public void setVenue(String venue) {
+        this.venue = venue;
+    }
+
+    public LocalDateTime getSalesStart() {
+        return salesStart;
+    }
+
+    public void setSalesStart(LocalDateTime salesStart) {
+        this.salesStart = salesStart;
+    }
+
+    public LocalDateTime getSalesEnd() {
+        return salesEnd;
+    }
+
+    public void setSalesEnd(LocalDateTime salesEnd) {
+        this.salesEnd = salesEnd;
+    }
+
+    public EventStatusEnum getStatus() {
+        return status;
+    }
+
+    public void setStatus(EventStatusEnum status) {
+        this.status = status;
+    }
+
+    public User getOrganizer() {
+        return organizer;
+    }
+
+    public void setOrganizer(User organizer) {
+        this.organizer = organizer;
+    }
+
+    public List<User> getAttendees() {
+        return attendees;
+    }
+
+    public void setAttendees(List<User> attendees) {
+        this.attendees = attendees;
+    }
+
+    public List<User> getStaff() {
+        return staff;
+    }
+
+    public void setStaff(List<User> staff) {
+        this.staff = staff;
+    }
+
+    public List<TicketType> getTicketTypes() {
+        return ticketTypes;
+    }
+
+    public void setTicketTypes(List<TicketType> ticketTypes) {
+        this.ticketTypes = ticketTypes;
+    }
+
+    public LocalDateTime getCreatedAt() {
+        return createdAt;
+    }
+
+    public void setCreatedAt(LocalDateTime createdAt) {
+        this.createdAt = createdAt;
+    }
+
+    public LocalDateTime getUpdatedAt() {
+        return updatedAt;
+    }
+
+    public void setUpdatedAt(LocalDateTime updatedAt) {
+        this.updatedAt = updatedAt;
+    }
 }

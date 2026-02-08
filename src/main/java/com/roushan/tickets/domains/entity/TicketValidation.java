@@ -71,4 +71,52 @@ public class TicketValidation {
     public int hashCode() {
         return Objects.hash(id, status, createdAt, updatedAt);
     }
+
+    public UUID getId() {
+        return id;
+    }
+
+    public void setId(UUID id) {
+        this.id = id;
+    }
+
+    public TicketValidationStatusEnum getStatus() {
+        return status;
+    }
+
+    public void setStatus(TicketValidationStatusEnum status) {
+        this.status = status;
+    }
+
+    public TicketValidationMethod getValidationMethod() {
+        return validationMethod;
+    }
+
+    public void setValidationMethod(TicketValidationMethod validationMethod) {
+        this.validationMethod = validationMethod;
+    }
+
+    public Ticket getTicket() {
+        return ticket;
+    }
+
+    public void setTicket(Ticket ticket) {
+        this.ticket = ticket;
+    }
+
+    public LocalDateTime getCreatedAt() {
+        return createdAt;
+    }
+
+    public void setCreatedAt(LocalDateTime createdAt) {
+        this.createdAt = createdAt;
+    }
+
+    public LocalDateTime getUpdatedAt() {
+        return updatedAt;
+    }
+
+    public void setUpdatedAt(LocalDateTime updatedAt) {
+        this.updatedAt = updatedAt;
+    }
 }
